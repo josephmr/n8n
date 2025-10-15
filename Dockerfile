@@ -12,3 +12,5 @@ RUN curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o 
 
 # Switch back to the default user 'node'
 USER node
+
+EXPOSE 5678
