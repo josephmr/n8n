@@ -4,11 +4,7 @@ FROM docker.n8n.io/n8nio/n8n
 # Switch to root to install packages
 USER root
 
-# Install Docker CLI and ffmpeg
-RUN apk add --no-cache python3 ffmpeg curl py3-pip
-
-RUN curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp && \
-    chmod a+rx /usr/local/bin/yt-dlp
+RUN apk add --no-cache python3 uv
 
 # Switch back to the default user 'node'
 USER node
